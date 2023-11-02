@@ -1,0 +1,26 @@
+iMac:~ maru$ mkdir git_challenge
+iMac:~ maru$ cd git_challenge
+iMac:git_challenge maru$ git init
+Initialized empty Git repository in /Users/maru/git_challenge/.git/
+iMac:git_challenge maru$ echo hello, world! > hello_world.txt
+iMac:git_challenge maru$ git add hello_world.txt
+iMac:git_challenge maru$ git commit -m "hello, worldを追加"
+[main (root-commit) c112e71] hello, worldを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+iMac:git_challenge maru$ echo こんにちは、世界 >> hello_world.txt
+iMac:git_challenge maru$ git diff
+diff --git a/hello_world.txt b/hello_world.txt
+index 270c611..0ecf2d4 100644
+--- a/hello_world.txt
++++ b/hello_world.txt
+@@ -1 +1,2 @@
+ hello, world!
++こんにちは、世界
+iMac:git_challenge maru$ git add hello_world.txt
+iMac:git_challenge maru$ git commit -m "日本語追加"
+[main e31725c] 日本語追加
+ 1 file changed, 1 insertion(+)
+iMac:git_challenge maru$ git log --oneline
+e31725c (HEAD -> main) 日本語追加
+c112e71 hello, worldを追加
